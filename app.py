@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+"""Final: Fetch image info using Gemini and weather using tool and agent"""
+
+__author__      = "Prashanth Subrahmanyam"
+__copyright__   = "Copyright 2024, Google LLC"
+__license__     = "Apache 2.0"
+
 # Copyright 2024 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,13 +19,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Final: Fetches image info using Gemini API 
-    and weather using a tool with langchain agent
-
-    Usage: 
-        pip install -r requirements.txt
-        streamlit run <filename>
-"""
 
 import streamlit as st
 import vertexai

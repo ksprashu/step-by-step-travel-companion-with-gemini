@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+"""Step 3: Fetches weather using Gemini by using a langchain agent"""
+
+__author__      = "Prashanth Subrahmanyam"
+__copyright__   = "Copyright 2024, Google LLC"
+__license__     = "Apache 2.0"
+
 # Copyright 2024 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,13 +18,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-"""Step 3: Fetches weather using Gemini by using a langchain agent
-
-    Usage: 
-        pip install -r requirements.txt
-        streamlit run <filename>
-"""
 
 
 import streamlit as st
