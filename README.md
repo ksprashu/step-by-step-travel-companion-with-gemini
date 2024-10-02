@@ -31,6 +31,6 @@ The app is based on python and need a few setup steps
    ```
 
 5. The app would have already opened up on the browser. If it doesn't you can open it up via the following URL.
-   `[http://http://localhost:8501/](http://localhost:8501/)`
+   `[http://localhost:8501/](http://localhost:8501/)`
 
    
