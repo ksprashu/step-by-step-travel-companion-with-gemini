@@ -34,7 +34,7 @@ dotenv.load_dotenv()
 
 # init vertex ai
 vertexai.init(
-    project=os.environ.get("PROJECT_ID"), 
+    project=os.environ.get("PROJECT_ID"),
     location=os.environ.get("REGION"))
 
 # init gemini 1.5 flash model
@@ -45,7 +45,7 @@ model = GenerativeModel("gemini-1.5-flash-001")
 def get_weather_api(city: str) -> dict:
     """ Returns the weather for the provided city as a string
 
-    Args: 
+    Args:
         city: an enum of type CityName
 
     Returns:
@@ -54,7 +54,7 @@ def get_weather_api(city: str) -> dict:
     Example(s):
         {"temperature": 25, "climate": "Sunny"}
         {"temperature": 30, "climate": "Windy"}}
-    
+
     # if Bangalore return "Cloud and 25 degrees Celcius"
     # if Hyderabad return "Sunny and 30 degrees Celcius"
     # if Jaipur return "Windy and 30 degrees Celcius"
@@ -108,7 +108,7 @@ def get_image_info(image_content):
 def display_identify_button():
     # show button to identify image
     upfile = st.session_state["image_file"]
-    if upfile is None: 
+    if upfile is None:
         return
 
     # display button only if image_info is empty
@@ -126,14 +126,14 @@ def display_identify_button():
 def display_image_upload():
     # upload image
     st.subheader("Upload an image")
-    upfile = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"], 
+    upfile = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"],
                               label_visibility="hidden")
-    
+
     if upfile is None and st.session_state["image_file"] is not None:
         upfile = st.session_state["image_file"]
     elif upfile is not None:
         st.session_state["image_file"] = upfile
-        
+
         # reset session when a new image is uploaded
         st.session_state["image_content"] = None
         st.session_state["image_info"] = None
@@ -154,8 +154,8 @@ def display_image_info():
     st.write(data["description"])
     st.subheader("Location")
     st.text(", ".join([
-        data["location"]["city"], 
-        data["location"]["state"], 
+        data["location"]["city"],
+        data["location"]["state"],
         data["location"]["country"]]))
 
 
@@ -196,7 +196,7 @@ def main():
     st.title("Travel Companion")
 
     display_image_upload()
-    display_identify_button() 
+    display_identify_button()
     display_image_info()
     display_weather()
 
