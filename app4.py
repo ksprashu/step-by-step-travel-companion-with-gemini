@@ -58,6 +58,7 @@ def get_weather_api(city: str) -> dict:
     # if Bangalore return "Cloud and 25 degrees Celcius"
     # if Hyderabad return "Sunny and 30 degrees Celcius"
     # if Jaipur return "Windy and 30 degrees Celcius"
+    # if Udaipur return "Windy and 10 degrees at night"
     """
 
     if city == "Bangalore" or city == "Bengaluru":
@@ -66,6 +67,8 @@ def get_weather_api(city: str) -> dict:
         return {"temperature": 30, "climate": "Sunny"}
     elif city == "Jaipur":
         return {"temperature": 30, "climate": "Windy"}
+    elif city == "Udaipur":
+        return {"temperature": 10, "climate": "Windy at night"}
     else:
         return {"temperature": 0, "climate": "Unknown"}
 
